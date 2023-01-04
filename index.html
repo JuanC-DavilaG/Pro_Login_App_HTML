@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--codigo para logos de accesos-->
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <!--aqui van nuestros estilos-->
+    <link rel="stylesheet" href="Acceso/styles/style.css">
+    <!--aqui van nuestras bibliotecas jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!--     <script>
+    
+        function validaForm(){
+        // Campos de texto
+        if($("#usuario").val() == ""){
+            alert("El campo usuario no puede estar vacío.");
+            $("#usuario").focus();       // Esta función coloca el foco de escritura del usuario en el campo Nombre directamente.
+            return false;
+        }
+        if($("#contraseña").val() == ""){
+            alert("El campo contraseña no puede estar vacío.");
+            $("#contraseña").focus();
+            return false;
+        }
+        return true; // Si todo está correcto
+        }
+
+    </script> -->
+    <title>Thulu</title>
+</head>
+<body>
+    <div class="ctn">
+        <div class="nodi-div">
+        <button class = "modo-nodi" id = "nodi">
+            <samp></samp>
+            <samp></samp>
+        </button>
+        </div>
+        <div class="ctn-form">
+            <div class="ctn-entrada-registro">
+                <form action="Acceso/php/test.php" class="form-entrada" method="post" id="login">
+                    <h2 class="titulo">Iniciar Sesión</h2>
+                    <div class="campo-entrada">
+                        <i class="fas fa-id-badge"></i>
+                        <input type="text" placeholder="Usuario" name="user" maxlength="32" required="required" id="usuario_log" onkeyup="if (event.keyCode == 13) validar()">
+                    </div>
+                    <div class="campo-entrada">
+                        <i class="fas fa-key"></i>
+                        <input type="password" placeholder="Contraseña" name="pass" maxlength="8" required="required" id="contraseña_log" onkeyup="if (event.keyCode == 13) validar()">
+                    </div>
+                    <input type="button" value="Iniciar" class="btn solido" id="inicio" onclick="validar()">
+                    <div class="opciones">
+                        <span class="opcion_1">Olvidaste tu contraseña ? <a href="#">Recuperala aquì.</a></span>
+                        <br>
+                        <span class="opcion_2">Quieres eliminar un usuario ? <a href="#">Selecciona aquì.</a></span>
+                        <span class="opcion_3">Crear clave de adminitraciòn ? <a href="#">Hazlo aquì.</a></span>
+                    </div>
+                    <p class="txt-redes">Entra con una red social</p>
+                    <div class="redes-sociales">
+                        <a href="#" class="iconos-sociales">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="iconos-sociales">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="iconos-sociales">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="iconos-sociales">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+
+                <form action="" class="form-registro">
+                    <h2 class="titulo">Registro</h2>
+                    <div class="campo-entrada">
+                        <i class="fas fa-id-badge"></i>
+                        <input type="text" placeholder="Usuario" name="user" maxlength="32" required="">
+                    </div>
+                    <div class="campo-entrada">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" placeholder="Email" name="email" required="">
+                    </div>
+                    <div class="campo-entrada">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Contraseña" name="pass" maxlength="8" required="">
+                    </div>
+                    <div class="campo-entrada">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Confirmar contraseña" name="confirm" maxlength="8" required="">
+                    </div>
+                    <div class="campo-entrada">
+                        <i class="fas fa-digital-tachograph"></i>
+                        <input type="password" placeholder="Clave del admistrador" name="admin" maxlength="8" required="">
+                    </div>
+                    <input type="button" value="Registrar" class="btn solido">
+                    <p class="txt-redes">Registrate con una red social</p>
+                    <div class="redes-sociales">
+                        <a href="#" class="iconos-sociales">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="iconos-sociales">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="iconos-sociales">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="iconos-sociales">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="ctn-panel">
+            <div class="panel panel-izq">
+                <div class="contenedor">
+                    <h3>Nuevo Usuario ? aqui!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, blanditiis. Hic, blanditiis.</p>
+                    <button class="btn transparente" id="Registrar">Registrar</button>
+                    
+                </div>
+                <img src="Acceso/img/dash.svg" class="imagen" alt="">
+                <!-- <img src="#" class="imagen" alt=""> -->
+            </div>
+            <div class="panel panel-der">
+                <div class="contenedor">
+                    <h3>Iniciar Sesion ? aqui!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, blanditiis. Hic, blanditiis.</p>
+                    <button class="btn transparente" id="Entrada">Iniciar Sesion</button>
+                    
+                </div>
+                <img src="Acceso/img/circuit.svg" class="imagen" alt="">
+                <!-- <img src="#" class="imagen" alt=""> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="msj cent">
+
+        <div class="icono">
+            <svg id="can">
+                <circle cx="20" cy="20" r="20" id="prb">
+                    <div class="cancel"></div>
+                </circle>
+            </svg>
+        </div>
+
+        <div class="alt">
+            
+        </div>
+        <div class="descripcion">
+            
+        </div>
+        <div id="cerrar">X</div>
+    </div>
+
+    <script src="Acceso/js/nodi.js"></script>
+    <script src="Acceso/js/anima.js"></script>
+    <script src="Acceso/js/iniciar-registrar.js"></script>
+</body>
+</html>
